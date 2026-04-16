@@ -9,15 +9,15 @@ html, body {
 
 /* ─── TOKENS ─────────────────────────────────────────────────────── */
 :root {
-  --splash-bg:   #f0f3bd;
-  --splash-text: #05668d;
-  --green:       #02c39a;
+  --splash-bg:   #ececec;
+  --splash-text: #222;
+  --green:       #a8de97;
 
-  --home-bg:     #f0f3bd;
-  --home-text:   #05668d;
-  --home-muted:  #00a896;
-  --green-dim:   rgba(2, 195, 154, 0.2);
-  --green-dark:  #028090;
+  --home-bg:     #ececec;
+  --home-text:   #222;
+  --home-muted:  #666;
+  --green-dim:   rgba(168, 222, 151, 0.25);
+  --green-dark:  #3a7a30;
 }
 
 /* ─── PANELS ─────────────────────────────────────────────────────── */
@@ -160,7 +160,7 @@ html, body {
 
 .splash-btn:hover {
   letter-spacing: 0.45em;
-  color: #028090;
+  color: #444;
 }
 
 /* ─── KEYFRAMES ──────────────────────────────────────────────────── */
@@ -293,12 +293,12 @@ html, body {
   grid-template-columns: minmax(180px, 1fr) 2fr;
   gap: 2.5rem;
   padding: 1.6rem 0;
-  border-top: 1px solid rgba(5, 102, 141, 0.1);
+  border-top: 1px solid rgba(34, 34, 34, 0.07);
   align-items: start;
 }
 
 .svc-item:last-child {
-  border-bottom: 1px solid rgba(5, 102, 141, 0.1);
+  border-bottom: 1px solid rgba(34, 34, 34, 0.07);
 }
 
 .svc-name {
@@ -359,15 +359,15 @@ html, body {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #f0f3bd;
-  background: #05668d;
+  color: #fff;
+  background: #222;
   padding: 0.9em 2.2em;
   text-decoration: none;
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .btn-cta:hover {
-  background: #028090;
+  background: #000;
   transform: translateY(-2px);
 }
 
@@ -381,7 +381,7 @@ html, body {
   transition: color 0.2s ease;
 }
 
-.contact-email:hover { color: #05668d; }
+.contact-email:hover { color: #222; }
 
 /* ─── HOME — FOOTER ──────────────────────────────────────────────── */
 .h-footer {
@@ -399,7 +399,7 @@ html, body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.72rem;
   font-weight: 300;
-  color: #00a896;
+  color: #999;
   letter-spacing: 0.04em;
 }
 
@@ -419,7 +419,7 @@ html, body {
   transition: color 0.2s ease;
 }
 
-.footer-link:hover { color: #05668d; }
+.footer-link:hover { color: #222; }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────────────── */
 @media (max-width: 620px) {
