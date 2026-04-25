@@ -25,6 +25,30 @@ function enterHome() {
   }, { once: true });
 }
 
+// Pillar hover — last hovered stays active, first is active by default
+const pillars = document.querySelectorAll('.svc-pillar');
+if (pillars.length) pillars[0].classList.add('is-active');
+
+pillars.forEach(pillar => {
+  pillar.addEventListener('mouseenter', () => {
+    if (pillar.classList.contains('is-active')) return;
+
+    pillars.forEach(p => p.classList.remove('is-active'));
+    pillar.classList.add('is-active');
+
+    const targetId = pillar.dataset.process;
+    document.querySelectorAll('.process-section').forEach(sec => {
+      if (sec.id === targetId) {
+        sec.classList.remove('is-hidden');
+        sec.classList.add('is-entering');
+        setTimeout(() => sec.classList.remove('is-entering'), 350);
+      } else {
+        sec.classList.add('is-hidden');
+      }
+    });
+  });
+});
+
 // Click the >> button
 btn.addEventListener('click', enterHome);
 

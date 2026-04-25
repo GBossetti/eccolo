@@ -1,0 +1,20 @@
+:root {
+  --splash-bg:   #f0f3bd;
+  --splash-text: #05668d;
+  --green:       #02c39a;
+
+  --home-bg:     #f0f3bd;
+  --home-text:   #05668d;
+  --home-muted:  #00a896;
+  --green-dim:   rgba(2, 195, 154, 0.2);
+  --green-dark:  #028090;
+
+  --btn-hover-color: #028090;
+  --svc-border:      rgba(5, 102, 141, 0.1);
+  --cta-text:        #f0f3bd;
+  --cta-bg:          #05668d;
+  --cta-hover-bg:    #028090;
+  --contact-hover:   #05668d;
+  --footer-muted:    #00a896;
+  --footer-hover:    #05668d;
+}
