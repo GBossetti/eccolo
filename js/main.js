@@ -25,30 +25,17 @@ function enterHome() {
   }, { once: true });
 }
 
-// Pillar interaction — hover on desktop, tap on mobile
+// Pillar hover — last hovered stays active, first is active by default
 const pillars = document.querySelectorAll('.svc-pillar');
 if (pillars.length) pillars[0].classList.add('is-active');
 
-const isMobile = () => window.matchMedia('(max-width: 620px)').matches;
+pillars.forEach(pillar => {
+  pillar.addEventListener('mouseenter', () => {
+    if (pillar.classList.contains('is-active')) return;
 
-function setupMobileLayout() {
-  if (!isMobile()) return;
+    pillars.forEach(p => p.classList.remove('is-active'));
+    pillar.classList.add('is-active');
 
-  pillars.forEach(pillar => {
-    const sec = document.getElementById(pillar.dataset.process);
-    if (!sec) return;
-    pillar.after(sec);
-    sec.classList.remove('is-hidden');
-    sec.classList.add('is-mobile-inline');
-  });
-}
-
-function activatePillar(pillar) {
-  if (pillar.classList.contains('is-active')) return;
-  pillars.forEach(p => p.classList.remove('is-active'));
-  pillar.classList.add('is-active');
-
-  if (!isMobile()) {
     const targetId = pillar.dataset.process;
     document.querySelectorAll('.process-section').forEach(sec => {
       if (sec.id === targetId) {
@@ -59,23 +46,6 @@ function activatePillar(pillar) {
         sec.classList.add('is-hidden');
       }
     });
-  }
-}
-
-setupMobileLayout();
-
-pillars.forEach(pillar => {
-  // Desktop: hover
-  pillar.addEventListener('mouseenter', () => {
-    if (!isMobile()) activatePillar(pillar);
-  });
-
-  // Mobile: tap → activate + scroll to its process section
-  pillar.addEventListener('click', () => {
-    if (!isMobile()) return;
-    activatePillar(pillar);
-    const sec = document.getElementById(pillar.dataset.process);
-    if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 
