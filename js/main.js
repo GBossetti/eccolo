@@ -29,6 +29,18 @@ function enterHome() {
 const pillars = document.querySelectorAll('.svc-pillar');
 if (pillars.length) pillars[0].classList.add('is-active');
 
+const isMobile = () => window.matchMedia('(max-width: 620px)').matches;
+
+// Mobile: move each process section inline after its card
+if (isMobile()) {
+  pillars.forEach(pillar => {
+    const sec = document.getElementById(pillar.dataset.process);
+    if (!sec) return;
+    pillar.after(sec);
+    sec.classList.remove('is-hidden');
+  });
+}
+
 pillars.forEach(pillar => {
   pillar.addEventListener('mouseenter', () => {
     if (pillar.classList.contains('is-active')) return;
@@ -36,16 +48,18 @@ pillars.forEach(pillar => {
     pillars.forEach(p => p.classList.remove('is-active'));
     pillar.classList.add('is-active');
 
-    const targetId = pillar.dataset.process;
-    document.querySelectorAll('.process-section').forEach(sec => {
-      if (sec.id === targetId) {
-        sec.classList.remove('is-hidden');
-        sec.classList.add('is-entering');
-        setTimeout(() => sec.classList.remove('is-entering'), 350);
-      } else {
-        sec.classList.add('is-hidden');
-      }
-    });
+    if (!isMobile()) {
+      const targetId = pillar.dataset.process;
+      document.querySelectorAll('.process-section').forEach(sec => {
+        if (sec.id === targetId) {
+          sec.classList.remove('is-hidden');
+          sec.classList.add('is-entering');
+          setTimeout(() => sec.classList.remove('is-entering'), 350);
+        } else {
+          sec.classList.add('is-hidden');
+        }
+      });
+    }
   });
 });
 
