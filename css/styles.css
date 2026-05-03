@@ -308,6 +308,17 @@ html, body {
   display: inline-block;
 }
 
+.h-bridge {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--green-dark);
+  line-height: 1.75;
+  margin-top: 2rem;
+  max-width: 480px;
+}
+
 /* ─── HOME — SECTION WRAPPER ─────────────────────────────────────── */
 .h-section {
   padding: 3rem 0;
@@ -347,8 +358,8 @@ html, body {
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 621px) {
-  .svc-pillars { grid-template-columns: 1fr 1fr; }
+@media (min-width: 900px) {
+  .svc-pillars { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 .svc-pillar {
@@ -357,15 +368,13 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
+  transition: border-color 0.3s ease;
 }
+
+.svc-pillar:hover { border-color: var(--green-dark); }
 
 @media (min-width: 621px) {
   .svc-pillar { padding: 2.8rem; }
-}
-
-.svc-pillar--accent {
-  background: var(--green-dark);
-  border-color: var(--green-dark);
 }
 
 .svc-pillar-num {
@@ -376,8 +385,6 @@ html, body {
   line-height: 1;
 }
 
-.svc-pillar--accent .svc-pillar-num { color: var(--green); }
-
 .svc-pillar-title {
   font-family: 'Quicksand', sans-serif;
   font-size: 1.2rem;
@@ -385,8 +392,6 @@ html, body {
   color: var(--home-text);
   line-height: 1.3;
 }
-
-.svc-pillar--accent .svc-pillar-title { color: var(--home-bg); }
 
 .svc-pillar-kicker {
   font-family: 'Quicksand', sans-serif;
@@ -396,50 +401,62 @@ html, body {
   color: var(--green-dark);
 }
 
-.svc-pillar--accent .svc-pillar-kicker { color: var(--green); }
-
 .svc-pillar-body {
   font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
   font-size: 1rem;
   font-weight: 300;
   color: var(--home-muted);
   line-height: 1.75;
+}
+
+.svc-capabilities {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
   flex-grow: 1;
 }
 
-.svc-pillar--accent .svc-pillar-body {
-  color: var(--home-bg);
-  opacity: 0.8;
+.svc-capabilities li {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--home-muted);
+  line-height: 1.55;
+  padding-left: 0.9rem;
+  position: relative;
 }
 
-.svc-pillar-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin-top: 0.5rem;
-}
-
-.svc-tag {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 0.3em 0.75em;
-  border: 1px solid var(--green-dark);
+.svc-capabilities li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
   color: var(--green-dark);
+  opacity: 0.6;
 }
 
-.svc-pillar--accent .svc-tag {
-  border-color: var(--green);
-  color: var(--green);
+.svc-capabilities strong {
+  font-weight: 500;
+  color: var(--home-text);
 }
 
+.svc-cta {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--green-dark);
+  text-decoration: none;
+  margin-top: 0.5rem;
+  display: inline-block;
+  transition: letter-spacing 0.25s ease, color 0.2s ease;
+}
 
-/* ─── PROCESS SECTION VISIBILITY ────────────────────────────────── */
-.process-section.is-hidden   { display: none; }
-.process-section.is-entering { animation: fadeIn 0.35s ease forwards; }
+.svc-cta:hover {
+  letter-spacing: 0.22em;
+  color: var(--home-text);
+}
+
 
 /* ─── HOME — PROCESS TIMELINE ────────────────────────────────────── */
 .process-steps {
@@ -495,13 +512,6 @@ html, body {
   .process-connector {
     width: 3rem;
     margin-top: 1.1rem;
-  }
-}
-
-/* Prevent process section from bleeding horizontally on mobile */
-@media (max-width: 620px) {
-  .process-section {
-    overflow: hidden;
   }
 }
 
@@ -601,6 +611,14 @@ html, body {
 }
 
 .contact-headline span { color: var(--green-dark); }
+
+.contact-sub {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--home-muted);
+  line-height: 1.6;
+}
 
 .contact-side {
   display: flex;
@@ -712,38 +730,3 @@ html, body {
 
 .footer-link:hover { color: var(--footer-hover); }
 
-/* ─── PILLAR HOVER INTERCHANGE ───────────────────────────────────── */
-.svc-pillar,
-.svc-pillar-num,
-.svc-pillar-title,
-.svc-pillar-kicker,
-.svc-pillar-body,
-.svc-tag {
-  transition:
-    background    0.3s ease,
-    border-color  0.3s ease,
-    color         0.3s ease,
-    opacity       0.3s ease;
-}
-
-/* Any pillar with .is-active becomes accent */
-.svc-pillar.is-active {
-  background: var(--green-dark);
-  border-color: var(--green-dark);
-}
-.svc-pillar.is-active .svc-pillar-num    { color: var(--green); }
-.svc-pillar.is-active .svc-pillar-title  { color: var(--home-bg); }
-.svc-pillar.is-active .svc-pillar-kicker { color: var(--green); }
-.svc-pillar.is-active .svc-pillar-body   { color: var(--home-bg); opacity: 0.8; }
-.svc-pillar.is-active .svc-tag           { border-color: var(--green); color: var(--green); }
-
-/* Non-active pillar resets to plain even if it has --accent class */
-.svc-pillar--accent:not(.is-active) {
-  background: transparent;
-  border-color: var(--green-dim);
-}
-.svc-pillar--accent:not(.is-active) .svc-pillar-num    { color: var(--green-dark); }
-.svc-pillar--accent:not(.is-active) .svc-pillar-title  { color: var(--home-text); }
-.svc-pillar--accent:not(.is-active) .svc-pillar-kicker { color: var(--green-dark); }
-.svc-pillar--accent:not(.is-active) .svc-pillar-body   { color: var(--home-muted); opacity: 1; }
-.svc-pillar--accent:not(.is-active) .svc-tag           { border-color: var(--green-dark); color: var(--green-dark); }

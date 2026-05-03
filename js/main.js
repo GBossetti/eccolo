@@ -25,34 +25,10 @@ function enterHome() {
   }, { once: true });
 }
 
-// Pillar hover — last hovered stays active, first is active by default
-const pillars = document.querySelectorAll('.svc-pillar');
-if (pillars.length) pillars[0].classList.add('is-active');
-
 const isMobile = () => window.matchMedia('(max-width: 620px)').matches;
 
-// Mobile: move each process section inline after its card
+// Mobile: process steps snap one at a time
 if (isMobile()) {
-  pillars.forEach(pillar => {
-    const sec = document.getElementById(pillar.dataset.process);
-    if (!sec) return;
-    pillar.after(sec);
-    sec.classList.remove('is-hidden');
-  });
-
-  // Scroll-activate cards via IntersectionObserver
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        pillars.forEach(p => p.classList.remove('is-active'));
-        entry.target.classList.add('is-active');
-      }
-    });
-  }, { threshold: 0.55 });
-
-  pillars.forEach(pillar => observer.observe(pillar));
-
-  // Process steps: snap one step at a time on swipe
   document.querySelectorAll('.process-steps').forEach(track => {
     const steps = Array.from(track.querySelectorAll('.process-step'));
     let currentIndex = 0;
@@ -86,36 +62,12 @@ if (isMobile()) {
   });
 }
 
-// Desktop: hover activates card + switches process section
-pillars.forEach(pillar => {
-  pillar.addEventListener('mouseenter', () => {
-    if (isMobile() || pillar.classList.contains('is-active')) return;
-
-    pillars.forEach(p => p.classList.remove('is-active'));
-    pillar.classList.add('is-active');
-
-    const targetId = pillar.dataset.process;
-    document.querySelectorAll('.process-section').forEach(sec => {
-      if (sec.id === targetId) {
-        sec.classList.remove('is-hidden');
-        sec.classList.add('is-entering');
-        setTimeout(() => sec.classList.remove('is-entering'), 350);
-      } else {
-        sec.classList.add('is-hidden');
-      }
-    });
-  });
-});
-
-// Click the >> button
 btn.addEventListener('click', enterHome);
 
-// Scroll down on splash
 splash.addEventListener('wheel', function (e) {
   if (e.deltaY > 0) enterHome();
 });
 
-// Swipe up on mobile (= scroll down)
 let touchStartY = 0;
 splash.addEventListener('touchstart', function (e) {
   touchStartY = e.touches[0].clientY;
