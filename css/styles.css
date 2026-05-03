@@ -215,6 +215,39 @@ html, body {
   text-transform: uppercase;
 }
 
+/* ─── LANGUAGE SWITCHER ──────────────────────────────────────────── */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.lang-btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--home-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2em 0.1em;
+  transition: color 0.2s ease;
+}
+
+.lang-btn.is-active {
+  color: var(--home-text);
+  font-weight: 600;
+}
+
+.lang-btn:hover { color: var(--home-text); }
+
+.lang-sep {
+  font-size: 0.72rem;
+  color: var(--home-muted);
+  opacity: 0.5;
+}
+
 /* ─── HOME — CONTENT WRAPPER ─────────────────────────────────────── */
 .h-body {
   max-width: 1200px;
@@ -336,9 +369,9 @@ html, body {
 }
 
 .svc-pillar-num {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--green-dark);
   line-height: 1;
 }
@@ -346,9 +379,9 @@ html, body {
 .svc-pillar--accent .svc-pillar-num { color: var(--green); }
 
 .svc-pillar-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--home-text);
   line-height: 1.3;
 }
@@ -356,7 +389,8 @@ html, body {
 .svc-pillar--accent .svc-pillar-title { color: var(--home-bg); }
 
 .svc-pillar-kicker {
-  font-family: 'Krub', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
   font-style: italic;
   font-size: 0.92rem;
   color: var(--green-dark);
@@ -365,7 +399,8 @@ html, body {
 .svc-pillar--accent .svc-pillar-kicker { color: var(--green); }
 
 .svc-pillar-body {
-  font-family: 'Krub', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   font-weight: 300;
   color: var(--home-muted);
@@ -386,7 +421,7 @@ html, body {
 }
 
 .svc-tag {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.12em;

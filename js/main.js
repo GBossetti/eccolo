@@ -39,27 +39,71 @@ if (isMobile()) {
     pillar.after(sec);
     sec.classList.remove('is-hidden');
   });
+
+  // Scroll-activate cards via IntersectionObserver
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        pillars.forEach(p => p.classList.remove('is-active'));
+        entry.target.classList.add('is-active');
+      }
+    });
+  }, { threshold: 0.55 });
+
+  pillars.forEach(pillar => observer.observe(pillar));
+
+  // Process steps: snap one step at a time on swipe
+  document.querySelectorAll('.process-steps').forEach(track => {
+    const steps = Array.from(track.querySelectorAll('.process-step'));
+    let currentIndex = 0;
+    let startX = 0, startY = 0;
+
+    function goTo(index) {
+      currentIndex = Math.max(0, Math.min(steps.length - 1, index));
+      const trackLeft = track.getBoundingClientRect().left;
+      const stepLeft  = steps[currentIndex].getBoundingClientRect().left;
+      track.scrollTo({ left: stepLeft - trackLeft + track.scrollLeft, behavior: 'smooth' });
+    }
+
+    track.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    }, { passive: true });
+
+    track.addEventListener('touchmove', e => {
+      const dx = Math.abs(e.touches[0].clientX - startX);
+      const dy = Math.abs(e.touches[0].clientY - startY);
+      if (dx > dy && dx > 5) e.preventDefault();
+    }, { passive: false });
+
+    track.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - startX;
+      const dy = e.changedTouches[0].clientY - startY;
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 30) {
+        goTo(currentIndex + (dx < 0 ? 1 : -1));
+      }
+    }, { passive: true });
+  });
 }
 
+// Desktop: hover activates card + switches process section
 pillars.forEach(pillar => {
   pillar.addEventListener('mouseenter', () => {
-    if (pillar.classList.contains('is-active')) return;
+    if (isMobile() || pillar.classList.contains('is-active')) return;
 
     pillars.forEach(p => p.classList.remove('is-active'));
     pillar.classList.add('is-active');
 
-    if (!isMobile()) {
-      const targetId = pillar.dataset.process;
-      document.querySelectorAll('.process-section').forEach(sec => {
-        if (sec.id === targetId) {
-          sec.classList.remove('is-hidden');
-          sec.classList.add('is-entering');
-          setTimeout(() => sec.classList.remove('is-entering'), 350);
-        } else {
-          sec.classList.add('is-hidden');
-        }
-      });
-    }
+    const targetId = pillar.dataset.process;
+    document.querySelectorAll('.process-section').forEach(sec => {
+      if (sec.id === targetId) {
+        sec.classList.remove('is-hidden');
+        sec.classList.add('is-entering');
+        setTimeout(() => sec.classList.remove('is-entering'), 350);
+      } else {
+        sec.classList.add('is-hidden');
+      }
+    });
   });
 });
 

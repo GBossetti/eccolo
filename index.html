@@ -6,7 +6,7 @@
   <title>ECCOLO — Software Design</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playwrite+IS:wght@100..400&family=IBM+Plex+Sans:wght@300;400&family=Inter:wght@400;500;600&family=Krub:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playwrite+IS:wght@100..400&family=IBM+Plex+Sans:wght@300;400&family=Inter:wght@400;500;600&family=Krub:wght@300;400;500&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/themes/oceanic.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -34,19 +34,23 @@
 
     <nav class="h-nav">
       <span class="h-nav-logo">ECCOLO</span>
-      <span class="h-nav-sub">Software Design</span>
+      <div class="lang-switcher">
+        <button class="lang-btn is-active" data-lang="en" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
+      </div>
     </nav>
 
     <div class="h-body">
 
       <!-- Hero -->
       <section class="h-hero">
-        <p class="h-eyebrow">Development Studio</p>
-        <h1 class="h-heading">
+        <p class="h-eyebrow" data-i18n="eyebrow">Development Software Studio</p>
+        <h1 class="h-heading" data-i18n-html="heading">
           Systems that run<br>
           <em>your business.</em>
         </h1>
-        <p class="h-lead">
+        <p class="h-lead" data-i18n="lead">
           We are a software development studio that builds custom digital infrastructure and growth engines for your projects.
           We understand your business model and design your competitive advantage.
         </p>
@@ -54,32 +58,32 @@
 
       <!-- Service Pillars -->
       <section class="h-section">
-        <p class="s-label">What we build</p>
+        <p class="s-label" data-i18n="label-build">What we build</p>
         <div class="svc-pillars">
 
           <div class="svc-pillar svc-pillar--accent" data-process="process-1">
             <p class="svc-pillar-num">I</p>
-            <h3 class="svc-pillar-title">Custom Operational<br>Ecosystems</h3>
-            <p class="svc-pillar-kicker">Your business. Your tools. Your data.</p>
-            <p class="svc-pillar-body">We design and build the custom digital infrastructure you need to capture data, manage clients, and visualize growth.</p>
+            <h3 class="svc-pillar-title" data-i18n-html="p1-title">Custom Operational<br>Ecosystems</h3>
+            <p class="svc-pillar-kicker" data-i18n="p1-kicker">Your business. Your tools. Your data.</p>
+            <p class="svc-pillar-body" data-i18n="p1-body">We design and build the custom digital infrastructure you need to capture data, manage clients, and visualize growth.</p>
             <div class="svc-pillar-tags">
-              <span class="svc-tag">Dashboards</span>
-              <span class="svc-tag">Web and mobile Apps</span>
-              <span class="svc-tag">Data Collection</span>
-              <span class="svc-tag">Automation</span>
+              <span class="svc-tag" data-i18n="tag-dashboards">Dashboards</span>
+              <span class="svc-tag" data-i18n="tag-apps">Web and mobile Apps</span>
+              <span class="svc-tag" data-i18n="tag-data">Data Collection</span>
+              <span class="svc-tag" data-i18n="tag-automation">Automation</span>
             </div>
           </div>
 
           <div class="svc-pillar" data-process="process-2">
             <p class="svc-pillar-num">II</p>
-            <h3 class="svc-pillar-title">Integrated Growth<br>Engineering</h3>
-            <p class="svc-pillar-kicker">For them to choose you, you need to be found.</p>
-            <p class="svc-pillar-body">We create webs with code designed for positioning and digital marketing from the first line of code.</p>
+            <h3 class="svc-pillar-title" data-i18n-html="p2-title">Integrated Growth<br>Engineering</h3>
+            <p class="svc-pillar-kicker" data-i18n="p2-kicker">For them to choose you, you need to be found.</p>
+            <p class="svc-pillar-body" data-i18n="p2-body">We create webs with code designed for positioning and digital marketing from the first line of code.</p>
             <div class="svc-pillar-tags">
-              <span class="svc-tag">Web Design</span>
-              <span class="svc-tag">SEO</span>
-              <span class="svc-tag">Digital Advertising</span>
-              <span class="svc-tag">Content Strategy</span>
+              <span class="svc-tag" data-i18n="tag-webdesign">Web Design</span>
+              <span class="svc-tag" data-i18n="tag-seo">SEO</span>
+              <span class="svc-tag" data-i18n="tag-ads">Digital Advertising</span>
+              <span class="svc-tag" data-i18n="tag-content">Content Strategy</span>
             </div>
           </div>
 
@@ -88,79 +92,79 @@
 
       <!-- Process -->
       <section class="h-section process-section" id="process-1">
-        <p class="s-label">How we work /</p>
+        <p class="s-label" data-i18n="label-process-1">How we work /</p>
         <div class="process-steps">
           <div class="process-step">
             <span class="process-step-num">01</span>
-            <h4 class="process-step-title">Discovery &amp; Strategy</h4>
-            <p class="process-step-desc">We map your business model. We identify the bottlenecks where software can improve your work.</p>
+            <h4 class="process-step-title" data-i18n-html="proc1-step1-title">Discovery &amp; Strategy</h4>
+            <p class="process-step-desc" data-i18n="proc1-step1-desc">We map your business model. We identify the bottlenecks where software can improve your work.</p>
           </div>
           <div class="process-connector"></div>
           <div class="process-step">
             <span class="process-step-num">02</span>
-            <h4 class="process-step-title">2-Week Sprints</h4>
-            <p class="process-step-desc">Every 14 days, you see progress, test features, and provide feedback.</p>
+            <h4 class="process-step-title" data-i18n="proc1-step2-title">2-Week Sprints</h4>
+            <p class="process-step-desc" data-i18n="proc1-step2-desc">Every 14 days, you see progress, test features, and provide feedback.</p>
           </div>
           <div class="process-connector"></div>
           <div class="process-step">
             <span class="process-step-num">03</span>
-            <h4 class="process-step-title">Deployment &amp; Optimization</h4>
-            <p class="process-step-desc">We iterate and refine the system to ensure you commit to your objective.</p>
+            <h4 class="process-step-title" data-i18n-html="proc1-step3-title">Deployment &amp; Optimization</h4>
+            <p class="process-step-desc" data-i18n="proc1-step3-desc">We iterate and refine the system to ensure you commit to your objective.</p>
           </div>
         </div>
       </section>
 
       <section class="h-section process-section is-hidden" id="process-2">
-        <p class="s-label">How we work //</p>
+        <p class="s-label" data-i18n="label-process-2">How we work //</p>
         <div class="process-steps">
           <div class="process-step">
             <span class="process-step-num">01</span>
-            <h4 class="process-step-title">Discovery &amp; Strategy</h4>
-            <p class="process-step-desc">We map your business model. We identify the bottlenecks where software can save you time or SEO can win you market share.</p>
+            <h4 class="process-step-title" data-i18n-html="proc2-step1-title">Discovery &amp; Strategy</h4>
+            <p class="process-step-desc" data-i18n="proc2-step1-desc">We map your business model. We identify the bottlenecks where software can save you time or SEO can win you market share.</p>
           </div>
           <div class="process-connector"></div>
           <div class="process-step">
             <span class="process-step-num">02</span>
-            <h4 class="process-step-title">1-Week Sprint</h4>
-            <p class="process-step-desc">Every 7 days, you see progress, test features, and provide feedback.</p>
+            <h4 class="process-step-title" data-i18n="proc2-step2-title">1-Week Sprint</h4>
+            <p class="process-step-desc" data-i18n="proc2-step2-desc">Every 7 days, you see progress, test features, and provide feedback.</p>
           </div>
           <div class="process-connector"></div>
           <div class="process-step">
             <span class="process-step-num">03</span>
-            <h4 class="process-step-title">Deployment &amp; Optimization</h4>
-            <p class="process-step-desc">We launch. Then we use data to refine the system and ensure the competitive advantage is working.</p>
+            <h4 class="process-step-title" data-i18n-html="proc2-step3-title">Deployment &amp; Optimization</h4>
+            <p class="process-step-desc" data-i18n="proc2-step3-desc">We launch. Then we use data to refine the system and ensure the competitive advantage is working.</p>
           </div>
         </div>
       </section>
 
-
       <!-- Contact -->
       <section class="h-contact">
-        <p class="s-label">Get in touch</p>
+        <p class="s-label" data-i18n="label-contact">Get in touch</p>
         <div class="contact-layout">
-          <div class="contact-headline">
+          <div class="contact-headline" data-i18n-html="contact-headline">
             Ready to engineer<br>
             your <span>advantage?</span>
           </div>
           <div class="contact-side">
-            <a href="mailto:gonzalo.bossetti@gmail.com" class="btn-cta"><span>Book a Discovery Session</span></a>
-            <a href="mailto:gonzalo.bossetti@gmail.com" class="contact-email">design@eccolo.com</a>
+            <a href="mailto:gonzalo.bossetti@gmail.com" class="btn-cta"><span data-i18n="cta-btn">Book a Discovery Session</span></a>
+            <a href="mailto:gonzalo.bossetti@gmail.com" class="contact-email" data-i18n="contact-email">design@eccolo.com</a>
           </div>
         </div>
       </section>
 
       <!-- Footer -->
       <footer class="h-footer">
-        <span class="footer-copy">© 2026 ECCOLO — All rights reserved</span>
+        <span class="footer-copy" data-i18n="footer-copy">© 2026 ECCOLO — All rights reserved</span>
         <div class="footer-links">
-          <a href="#" class="footer-link">GitHub</a>
-          <a href="#" class="footer-link">LinkedIn</a>
+          <a href="#" class="footer-link" data-i18n="footer-github">GitHub</a>
+          <a href="#" class="footer-link" data-i18n="footer-linkedin">LinkedIn</a>
         </div>
       </footer>
 
     </div>
   </div>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 
 </body>
