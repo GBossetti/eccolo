@@ -258,7 +258,9 @@ function applyLang(lang) {
   document.documentElement.lang = lang;
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('is-active', btn.dataset.lang === lang);
+    const active = btn.dataset.lang === lang;
+    btn.classList.toggle('is-active', active);
+    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
   });
 }
 
@@ -270,5 +272,31 @@ function setLang(lang) {
 }
 
 window.setLang = setLang;
+
+const LANG_NAMES = { en: 'English', es: 'Español', it: 'Italiano', ca: 'Català' };
+
+(function buildSwitcher() {
+  const switcher = document.querySelector('.lang-switcher');
+  if (!switcher) return;
+  switcher.setAttribute('role', 'group');
+  switcher.setAttribute('aria-label', 'Language selector');
+  SUPPORTED.forEach((lang, i) => {
+    if (i > 0) {
+      const dot = document.createElement('span');
+      dot.className = 'lang-dot';
+      dot.textContent = '·';
+      dot.setAttribute('aria-hidden', 'true');
+      switcher.appendChild(dot);
+    }
+    const btn = document.createElement('button');
+    btn.className = 'lang-btn';
+    btn.dataset.lang = lang;
+    btn.textContent = lang.toUpperCase();
+    btn.setAttribute('aria-label', `Switch to ${LANG_NAMES[lang]}`);
+    btn.setAttribute('aria-pressed', 'false');
+    btn.addEventListener('click', () => setLang(lang));
+    switcher.appendChild(btn);
+  });
+})();
 
 applyLang(getLang());

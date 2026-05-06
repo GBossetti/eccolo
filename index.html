@@ -6,7 +6,8 @@
   <title>ECCOLO — Software Design</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playwrite+IS:wght@100..400&family=IBM+Plex+Sans:wght@300;400&family=Inter:wght@400;500;600&family=Krub:wght@300;400;500&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Eccolo designs custom software, web presence, and intelligent systems that fit the way you actually work — and grow as you do.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playwrite+IS:wght@100..400&family=IBM+Plex+Sans:wght@300;400&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/themes/oceanic.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -21,7 +22,7 @@
           <span>e</span><span>c</span><span>c</span><span>o</span><span>l</span><span>o</span>
         </div>
         <div class="splash-sub-row">
-          <span class="splash-sub">software design</span>
+          <span class="splash-sub">software solutions</span>
           <button class="splash-btn" id="enter-btn">&gt;&gt;</button>
         </div>
       </div>
@@ -32,23 +33,20 @@
   <!-- ═══════════════════════════ HOME ════════════════════════════════ -->
   <div id="home">
 
-    <nav class="h-nav">
-      <span class="h-nav-logo">ECCOLO</span>
-      <div class="lang-switcher">
-        <button class="lang-btn is-active" data-lang="en" onclick="setLang('en')">EN</button>
-        <span class="lang-sep">/</span>
-        <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
-        <span class="lang-sep">/</span>
-        <button class="lang-btn" data-lang="it" onclick="setLang('it')">IT</button>
-        <span class="lang-sep">/</span>
-        <button class="lang-btn" data-lang="ca" onclick="setLang('ca')">CA</button>
-      </div>
-    </nav>
+    <div class="lang-float">
+      <div class="lang-switcher"></div>
+    </div>
 
     <div class="h-body">
 
       <!-- Hero -->
       <section class="h-hero">
+
+        <div class="h-brand">
+          <p class="h-brand-name">ECCOLO</p>
+          <p class="h-brand-sub">software solutions</p>
+        </div>
+
         <p class="h-eyebrow" data-i18n="eyebrow">Technology that moves with you.</p>
         <h1 class="h-heading" data-i18n-html="heading">
           You run the vision.<br>

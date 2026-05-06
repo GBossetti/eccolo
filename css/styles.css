@@ -180,42 +180,19 @@ html, body {
   to   { opacity: 1; transform: translateX(0); }
 }
 
-/* ─── HOME — NAV ─────────────────────────────────────────────────── */
-.h-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: 1rem 1.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--home-bg);
-  border-bottom: 1.5px solid var(--green-dark);
+/* ─── LANGUAGE FLOAT ─────────────────────────────────────────────── */
+.lang-float {
+  position: fixed;
+  top: 1.5rem;
+  right: clamp(1.4rem, 5vw, 3.5rem);
+  z-index: 500;
+  opacity: 0;
 }
 
-@media (min-width: 621px) {
-  .h-nav { padding: 1.1rem 2.8rem 1.1rem clamp(2rem, 7vw, 6rem); }
+#home.entering .lang-float {
+  animation: fadeIn 0.5s ease forwards 0.15s;
 }
 
-.h-nav-logo {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--home-text);
-  letter-spacing: 0.08em;
-  text-decoration: none;
-}
-
-.h-nav-sub {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 400;
-  color: var(--green-dark);
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-}
-
-/* ─── LANGUAGE SWITCHER ──────────────────────────────────────────── */
 .lang-switcher {
   display: flex;
   align-items: center;
@@ -224,14 +201,16 @@ html, body {
 
 .lang-btn {
   font-family: 'Poppins', sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.6rem;
   font-weight: 500;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   color: var(--home-muted);
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.2em 0.1em;
+  padding: 0.15em 0;
+  line-height: 1;
   transition: color 0.2s ease;
 }
 
@@ -242,10 +221,67 @@ html, body {
 
 .lang-btn:hover { color: var(--home-text); }
 
-.lang-sep {
-  font-size: 0.72rem;
+.lang-dot {
+  font-size: 0.45rem;
   color: var(--home-muted);
-  opacity: 0.5;
+  opacity: 0.4;
+  user-select: none;
+}
+
+.lang-sep { display: none; }
+
+/* ─── HOME — BRAND BLOCK ─────────────────────────────────────────── */
+.h-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  padding-bottom: 2.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--green-dim);
+  opacity: 0;
+}
+
+#home.entering .h-brand {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.h-brand-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(3.2rem, 8vw, 5.8rem);
+  font-weight: 600;
+  color: var(--home-text);
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.h-brand-sub {
+  font-family: 'Playwrite IS', cursive;
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
+  color: var(--green-dark);
+  position: relative;
+  display: inline-block;
+}
+
+.h-brand-sub::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 63%;
+  translate: -50% 0;
+  width: 300%;
+  aspect-ratio: 1/1;
+  z-index: -1;
+  border: 14px solid var(--green);
+  border-radius: 50%;
+  mask-image: conic-gradient(from -27deg, #000 var(--mask-progress), #0000 0);
+}
+
+#home.entering .h-brand-sub::before {
+  animation: circleReveal 0.65s ease forwards 0.3s;
+}
+
+@media (min-width: 769px) {
+  .h-brand-sub::before { border-width: 22px; }
 }
 
 /* ─── HOME — CONTENT WRAPPER ─────────────────────────────────────── */
@@ -261,22 +297,27 @@ html, body {
 
 /* ─── HOME — HERO ────────────────────────────────────────────────── */
 .h-hero {
-  padding: 3.5rem 0 3rem;
+  padding: 3.5rem 0 3.5rem;
   border-bottom: 1px solid var(--green-dim);
 }
 
 @media (min-width: 621px) {
-  .h-hero { padding: 6rem 0 5rem; }
+  .h-hero { padding: 5rem 0 5rem; }
 }
 
 .h-eyebrow {
   font-family: 'Poppins', sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 500;
   color: var(--green-dark);
-  letter-spacing: 0.35em;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+}
+
+#home.entering .h-eyebrow {
+  animation: fadeUp 0.6s ease forwards 0.35s;
 }
 
 .h-heading {
@@ -286,6 +327,11 @@ html, body {
   color: var(--home-text);
   line-height: 1.14;
   margin-bottom: 2rem;
+  opacity: 0;
+}
+
+#home.entering .h-heading {
+  animation: fadeUp 0.6s ease forwards 0.5s;
 }
 
 .h-heading em {
@@ -301,6 +347,11 @@ html, body {
   color: var(--home-muted);
   line-height: 1.8;
   max-width: 540px;
+  opacity: 0;
+}
+
+#home.entering .h-lead {
+  animation: fadeUp 0.6s ease forwards 0.65s;
 }
 
 .h-hero .btn-cta {
@@ -317,6 +368,11 @@ html, body {
   line-height: 1.75;
   margin-top: 2rem;
   max-width: 480px;
+  opacity: 0;
+}
+
+#home.entering .h-bridge {
+  animation: fadeUp 0.6s ease forwards 0.8s;
 }
 
 /* ─── HOME — SECTION WRAPPER ─────────────────────────────────────── */

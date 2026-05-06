@@ -13,11 +13,13 @@ function enterHome() {
   home.classList.add('entering');
 
   splash.addEventListener('transitionend', function () {
-    splash.style.display = 'none';
-    home.style.position  = 'relative';
-    home.style.transform = 'none';
-    home.style.height    = 'auto';
-    home.style.inset     = 'auto';
+    splash.style.display     = 'none';
+    splash.style.willChange  = 'auto';
+    home.style.position      = 'relative';
+    home.style.transform     = 'none';
+    home.style.willChange    = 'auto';
+    home.style.height        = 'auto';
+    home.style.inset         = 'auto';
     document.body.style.overflow            = 'auto';
     document.body.style.height              = 'auto';
     document.documentElement.style.overflow = 'auto';
