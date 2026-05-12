@@ -3,10 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ECCOLO — Software Design</title>
+  <title>ECCOLO — Digital Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta name="description" content="Eccolo designs custom software, web presence, and intelligent systems that fit the way you actually work — and grow as you do.">
+
+  <!-- Update these URLs once the domain is live -->
+  <link rel="canonical"  href="https://eccolo.com/">
+  <link rel="alternate"  hreflang="x-default" href="https://eccolo.com/">
+  <link rel="alternate"  hreflang="en"         href="https://eccolo.com/">
+  <link rel="alternate"  hreflang="es"         href="https://eccolo.com/?lang=es">
+  <link rel="alternate"  hreflang="it"         href="https://eccolo.com/?lang=it">
+  <link rel="alternate"  hreflang="ca"         href="https://eccolo.com/?lang=ca">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://eccolo.com/#website",
+        "url": "https://eccolo.com/",
+        "name": "ECCOLO — Digital Solutions",
+        "description": "Eccolo designs custom software, web presence, and intelligent systems that fit the way you actually work — and grow as you do.",
+        "inLanguage": ["en", "es", "it", "ca"]
+      },
+      {
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "https://eccolo.com/#organization",
+        "name": "Eccolo",
+        "url": "https://eccolo.com/",
+        "description": "Custom software, web presence, and intelligent systems designed around the way you actually work.",
+        "email": "design@eccolo.com",
+        "knowsLanguage": ["en", "es", "it", "ca"],
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Software Development", "description": "Internal systems and apps designed around the way your team actually works — dashboards, mobile apps, and smart automation." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design & Development", "description": "High-performance websites built for speed, SEO, and conversion from the first line of code." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom AI Agents", "description": "AI agents trained on your specific business logic, workflows, and decisions." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Strategic SEO", "description": "Visibility that compounds over time through technical SEO and content strategy." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads & Digital Advertising", "description": "Targeted advertising strategies that return your investment." } }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://eccolo.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is The Digital Core service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Digital Core covers custom internal software — private dashboards, web and mobile apps, and smart automation — designed around the way you and your team actually work, replacing generic tools with systems that create real flow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Presence & Authority include?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Presence & Authority covers high-performance web design, strategic SEO for long-term visibility, and targeted Google Ads campaigns — all engineered together from the first line of code to convert visitors into clients."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Specialized Intelligence?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Specialized Intelligence means custom AI agents built around your specific business logic, workflows, and decisions — not generic AI tools, but systems trained to think and operate the way your business does."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the Eccolo development process work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Eccolo works in three phases: The Blueprint (mapping your business needs and opportunities), The Development Rhythm (short focused cycles with full visibility), and Launch & Momentum (going live and improving continuously based on real-world data)."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playwrite+IS:wght@100..400&family=IBM+Plex+Sans:wght@300;400&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/themes/oceanic.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -22,7 +106,7 @@
           <span>e</span><span>c</span><span>c</span><span>o</span><span>l</span><span>o</span>
         </div>
         <div class="splash-sub-row">
-          <span class="splash-sub">software solutions</span>
+          <span class="splash-sub">digital solutions</span>
           <button class="splash-btn" id="enter-btn">&gt;&gt;</button>
         </div>
       </div>
@@ -37,14 +121,14 @@
       <div class="lang-switcher"></div>
     </div>
 
-    <div class="h-body">
+    <main class="h-body">
 
       <!-- Hero -->
       <section class="h-hero">
 
         <div class="h-brand">
           <p class="h-brand-name">ECCOLO</p>
-          <p class="h-brand-sub">software solutions</p>
+          <p class="h-brand-sub">digital solutions</p>
         </div>
 
         <p class="h-eyebrow" data-i18n="eyebrow">Technology that moves with you.</p>
@@ -69,28 +153,20 @@
 
           <div class="svc-pillar">
             <p class="svc-pillar-num">I</p>
-            <h3 class="svc-pillar-title" data-i18n="p1-title">The Digital Core</h3>
-            <p class="svc-pillar-kicker" data-i18n="p1-kicker">Your routines, refined.</p>
-            <p class="svc-pillar-body" data-i18n="p1-body">Generic software creates workarounds. Custom tools create flow. We build the internal systems designed around the way you and your team actually work.</p>
-            <ul class="svc-capabilities">
-              <li><strong data-i18n="p1-cap1-label">Private Dashboards</strong><span data-i18n="p1-cap1-desc"> — Your business data, clear at a glance.</span></li>
-              <li><strong data-i18n="p1-cap2-label">Custom Apps (Web & Mobile)</strong><span data-i18n="p1-cap2-desc"> — Manage clients and register data from anywhere.</span></li>
-              <li><strong data-i18n="p1-cap3-label">Smart Automation</strong><span data-i18n="p1-cap3-desc"> — The repetitive tasks disappear. You stay focused.</span></li>
-            </ul>
-            <a href="#contact" class="svc-cta" data-i18n="p1-cta">Start with your tools →</a>
+            <h3 class="svc-pillar-title" data-i18n="p1-title">Presence & Authority</h3>
+            <p class="svc-pillar-kicker" data-i18n="p1-kicker">Be found. Be understood.</p>
+            <p class="svc-pillar-body" data-i18n="p1-body">A website isn't a brochure — it's your most consistent salesperson. We engineer web experiences where clean code, strategic SEO, and targeted advertising work together from the first line.</p>
+            <p class="svc-cap-line" data-i18n="p1-caps">High-Performance Web Design / Strategic SEO & GEO / Targeted Advertising</p>
+            <a href="#contact" class="svc-cta" data-i18n="p1-cta">Start with your presence →</a>
           </div>
 
           <div class="svc-pillar">
             <p class="svc-pillar-num">II</p>
-            <h3 class="svc-pillar-title" data-i18n="p2-title">Presence & Authority</h3>
-            <p class="svc-pillar-kicker" data-i18n="p2-kicker">Be found. Be understood.</p>
-            <p class="svc-pillar-body" data-i18n="p2-body">A website isn't a brochure — it's your most consistent salesperson. We engineer web experiences where clean code, strategic SEO, and targeted advertising work together from the first line.</p>
-            <ul class="svc-capabilities">
-              <li><strong data-i18n="p2-cap1-label">High-Performance Web Design</strong><span data-i18n="p2-cap1-desc"> — Fast, clean, and built to convert.</span></li>
-              <li><strong data-i18n="p2-cap2-label">Strategic SEO</strong><span data-i18n="p2-cap2-desc"> — Visibility that compounds over time.</span></li>
-              <li><strong data-i18n="p2-cap3-label">Targeted Advertising</strong><span data-i18n="p2-cap3-desc"> — Google Ads strategies that return your investment.</span></li>
-            </ul>
-            <a href="#contact" class="svc-cta" data-i18n="p2-cta">Start with your presence →</a>
+            <h3 class="svc-pillar-title" data-i18n="p2-title">The Digital Core</h3>
+            <p class="svc-pillar-kicker" data-i18n="p2-kicker">Your business. Your tools. Your data.</p>
+            <p class="svc-pillar-body" data-i18n="p2-body">Generic software creates workarounds. Custom tools create flow. We build the internal systems designed around the way you and your team actually work.</p>
+            <p class="svc-cap-line" data-i18n="p2-caps">Private Dashboards / Custom Apps / Smart Automation</p>
+            <a href="#contact" class="svc-cta" data-i18n="p2-cta">Your routines, refined →</a>
           </div>
 
           <div class="svc-pillar">
@@ -98,11 +174,7 @@
             <h3 class="svc-pillar-title" data-i18n="p3-title">Specialized Intelligence</h3>
             <p class="svc-pillar-kicker" data-i18n="p3-kicker">Your logic. Your rules. Your agent.</p>
             <p class="svc-pillar-body" data-i18n="p3-body">Most AI tools are built for everyone, which means they're optimized for no one. We design custom AI agents trained on your specific business — so the automation thinks the way you do.</p>
-            <ul class="svc-capabilities">
-              <li><strong data-i18n="p3-cap1-label">Custom AI Agents</strong><span data-i18n="p3-cap1-desc"> — Built around your workflows and decisions.</span></li>
-              <li><strong data-i18n="p3-cap2-label">Business Logic Integration</strong><span data-i18n="p3-cap2-desc"> — Your rules, your exceptions, your voice.</span></li>
-              <li><strong data-i18n="p3-cap3-label">Continuous Refinement</strong><span data-i18n="p3-cap3-desc"> — The agent learns as your business evolves.</span></li>
-            </ul>
+            <p class="svc-cap-line" data-i18n="p3-caps">Custom AI Agents / Business Logic Integration / Continuous Refinement</p>
             <a href="#contact" class="svc-cta" data-i18n="p3-cta">Explore what's possible →</a>
           </div>
 
@@ -128,7 +200,7 @@
           <div class="process-step">
             <span class="process-step-num">03</span>
             <h4 class="process-step-title" data-i18n="proc-step3-title">Launch & Momentum</h4>
-            <p class="process-step-desc" data-i18n="proc-step3-desc">Going live is the beginning, not the end. We use real-world data to sharpen your tools, refine your presence, and make sure your systems are always one step ahead.</p>
+            <p class="process-step-desc" data-i18n="proc-step3-desc">Going live is the beginning, not the end. We use real-world data and, more importantly, your data, to sharpen your own tools, refine your presence, and make sure your systems are always one step ahead.</p>
           </div>
         </div>
       </section>
@@ -158,7 +230,7 @@
         </div>
       </footer>
 
-    </div>
+    </main>
   </div>
 
   <script src="js/i18n.js"></script>
