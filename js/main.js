@@ -64,6 +64,37 @@ if (isMobile()) {
   });
 }
 
+// ─── SERVICE PILLAR ACCORDION ─────────────────────────────────────────────
+(function () {
+  const pillars = Array.from(document.querySelectorAll('.svc-pillar'));
+
+  function setPillarState(pillar, open) {
+    pillar.classList.toggle('is-open', open);
+    const btn  = pillar.querySelector('.svc-expand-btn');
+    const body = pillar.querySelector('.svc-pillar-body');
+    if (btn)  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (body) body.setAttribute('aria-hidden',  open ? 'false' : 'true');
+  }
+
+  function togglePillar(target) {
+    const willOpen = !target.classList.contains('is-open');
+    pillars.forEach(p => setPillarState(p, false));
+    if (willOpen) setPillarState(target, true);
+  }
+
+  pillars.forEach(pillar => {
+    pillar.setAttribute('tabindex', '0');
+    pillar.addEventListener('click', e => {
+      if (e.target.closest('.svc-cta')) return;
+      togglePillar(pillar);
+    });
+    pillar.addEventListener('keydown', e => {
+      if (e.target.closest('.svc-cta')) return;
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); togglePillar(pillar); }
+    });
+  });
+})();
+
 btn.addEventListener('click', enterHome);
 
 splash.addEventListener('wheel', function (e) {

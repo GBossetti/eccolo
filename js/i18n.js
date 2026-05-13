@@ -2,11 +2,10 @@ const translations = {
   en: {
     'eyebrow':          'Technology that moves with you.',
     'heading':          'You run the vision.<br><em>We build what carries it forward.</em>',
-    'lead':             'Most businesses are running on tools built for someone else. We design the custom software, web presence, and intelligent systems that fit the way you actually work — and grow as you do.',
-    'bridge':           'Every project starts where you are. Pick the piece that matters most right now. The rest follows when you\'re ready.',
+    'lead':             'Most businesses are running on tools built for someone else. We design the web presence, custom software, and intelligent systems that fit the way you actually work — and grow as you do.',
     'label-build':      'Where do you want to start?',
 
-    'p1-title':         'Presence & Authority',
+    'p1-title':         'Presence & Awareness',
     'p1-kicker':        'Be found. Be understood.',
     'p1-body':          'A website isn\'t a brochure — it\'s your most consistent salesperson. We engineer web experiences where clean code, strategic SEO, and targeted advertising work together from the first line.',
     'p1-caps':          'High-Performance Web Design / Strategic SEO & GEO / Targeted Advertising',
@@ -19,7 +18,7 @@ const translations = {
     'p2-cta':           'Your routines, refined →',
 
     'p3-title':         'Specialized Intelligence',
-    'p3-kicker':        'Your logic. Your rules. Your agent.',
+    'p3-kicker':        'Not built for everyone. Built for you.',
     'p3-body':          'Most AI tools are built for everyone, which means they\'re optimized for no one. We design custom AI agents trained on your specific business — so the automation thinks the way you do.',
     'p3-caps':          'Custom AI Agents / Business Logic Integration / Continuous Refinement',
     'p3-cta':           'Explore what\'s possible →',
@@ -45,11 +44,10 @@ const translations = {
   es: {
     'eyebrow':          'Tecnología que evoluciona contigo.',
     'heading':          'Tú lideras la visión.<br><em>Nosotros construimos lo que la sostiene.</em>',
-    'lead':             'La mayoría de los negocios operan con herramientas pensadas para otro. Diseñamos el software personalizado, la presencia digital y los sistemas inteligentes que se adaptan a cómo trabajas — y crecen contigo.',
-    'bridge':           'Cada proyecto empieza donde tú estás. Elige la pieza que más importa ahora. El resto llega cuando estés listo.',
+    'lead':             'La mayoría de los negocios operan con herramientas pensadas para otro. Diseñamos la presencia digital, el software personalizado y los sistemas inteligentes que se adaptan a cómo trabajas — y crecen contigo.',
     'label-build':      '¿Por dónde quieres empezar?',
 
-    'p1-title':         'Presencia y Autoridad',
+    'p1-title':         'Presencia y Visibilidad',
     'p1-kicker':        'Que te encuentren. Que te entiendan.',
     'p1-body':          'Un sitio web no es un folleto — es tu vendedor más constante. Desarrollamos experiencias web donde el código limpio, el SEO estratégico y la publicidad dirigida trabajan juntos desde la primera línea.',
     'p1-caps':          'Diseño Web de Alto Rendimiento / SEO Estratégico y GEO / Publicidad Dirigida',
@@ -62,7 +60,7 @@ const translations = {
     'p2-cta':           'Tus rutinas, refinadas →',
 
     'p3-title':         'Inteligencia Especializada',
-    'p3-kicker':        'Tu lógica. Tus reglas. Tu agente.',
+    'p3-kicker':        'No es para todos. Es para ti.',
     'p3-body':          'La mayoría de las herramientas de IA están hechas para todos, lo que significa que no están optimizadas para nadie. Diseñamos agentes de IA entrenados en tu negocio específico — para que la automatización piense como tú.',
     'p3-caps':          'Agentes de IA Personalizados / Integración de Lógica de Negocio / Refinamiento Continuo',
     'p3-cta':           'Explora las posibilidades →',
@@ -88,11 +86,10 @@ const translations = {
   it: {
     'eyebrow':          'Tecnologia che cresce con te.',
     'heading':          'Tu guidi la visione.<br><em>Noi costruiamo ciò che la porta avanti.</em>',
-    'lead':             'La maggior parte delle aziende usa strumenti pensati per altri. Progettiamo software personalizzato, presenza digitale e sistemi intelligenti che si adattano al tuo modo di lavorare — e crescono con te.',
-    'bridge':           'Ogni progetto parte da dove sei. Scegli la parte che conta di più adesso. Il resto segue quando sei pronto.',
+    'lead':             'La maggior parte delle aziende usa strumenti pensati per altri. Progettiamo la presenza digitale, software personalizzato e sistemi intelligenti che si adattano al tuo modo di lavorare — e crescono con te.',
     'label-build':      'Da dove vuoi iniziare?',
 
-    'p1-title':         'Presenza e Autorità',
+    'p1-title':         'Presenza e Visibilità',
     'p1-kicker':        'Fatti trovare. Fatti capire.',
     'p1-body':          'Un sito web non è una brochure — è il tuo venditore più costante. Progettiamo esperienze web dove codice pulito, SEO strategico e pubblicità mirata lavorano insieme dalla prima riga.',
     'p1-caps':          'Web Design ad Alte Prestazioni / SEO Strategico e GEO / Pubblicità Mirata',
@@ -105,7 +102,7 @@ const translations = {
     'p2-cta':           'Le tue routine, raffinate →',
 
     'p3-title':         'Intelligenza Specializzata',
-    'p3-kicker':        'La tua logica. Le tue regole. Il tuo agente.',
+    'p3-kicker':        'Non per tutti. Per te.',
     'p3-body':          'La maggior parte degli strumenti AI è costruita per tutti, il che significa che non sono ottimizzati per nessuno. Progettiamo agenti AI addestrati sul tuo business specifico — così l\'automazione pensa come te.',
     'p3-caps':          'Agenti AI Personalizzati / Integrazione della Logica di Business / Raffinamento Continuo',
     'p3-cta':           'Esplora cosa è possibile →',
@@ -131,11 +128,10 @@ const translations = {
   ca: {
     'eyebrow':          'Tecnologia que creix amb tu.',
     'heading':          'Tu lidera la visió.<br><em>Nosaltres construïm el que la porta endavant.</em>',
-    'lead':             'La majoria d\'empreses funcionen amb eines pensades per a uns altres. Dissenyem el programari personalitzat, la presència digital i els sistemes intel·ligents que s\'adapten a com treballes — i creixen amb tu.',
-    'bridge':           'Cada projecte comença on tu ets. Tria la peça que més importa ara. La resta arriba quan estàs a punt.',
+    'lead':             'La majoria d\'empreses funcionen amb eines pensades per a uns altres. Dissenyem la presència digital, el programari personalitzat i els sistemes intel·ligents que s\'adapten a com treballes — i creixen amb tu.',
     'label-build':      'Per on vols començar?',
 
-    'p1-title':         'Presència i Autoritat',
+    'p1-title':         'Presència i Visibilitat',
     'p1-kicker':        'Que et trobin. Que t\'entenguin.',
     'p1-body':          'Un lloc web no és un fullet — és el teu venedor més constant. Desenvolupem experiències web on el codi net, el SEO estratègic i la publicitat dirigida treballen junts des de la primera línia.',
     'p1-caps':          'Disseny Web d\'Alt Rendiment / SEO Estratègic i GEO / Publicitat Dirigida',
@@ -148,7 +144,7 @@ const translations = {
     'p2-cta':           'Les teves rutines, refinades →',
 
     'p3-title':         'Intel·ligència Especialitzada',
-    'p3-kicker':        'La teva lògica. Les teves regles. El teu agent.',
+    'p3-kicker':        'No és per a tothom. És per a tu.',
     'p3-body':          'La majoria d\'eines d\'IA estan construïdes per a tothom, la qual cosa significa que no estan optimitzades per a ningú. Dissenyem agents d\'IA entrenats en el teu negoci específic — perquè l\'automatització pensi com tu.',
     'p3-caps':          'Agents d\'IA Personalitzats / Integració de Lògica de Negoci / Refinament Continu',
     'p3-cta':           'Explora les possibilitats →',
