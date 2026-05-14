@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    'eyebrow':          'Technology that moves with you.',
+    'eyebrow':          'Technology that moves <span class="eyebrow-break">with you.</span>',
     'heading':          'You run the vision.<br><em>We build what carries it forward.</em>',
     'lead':             'Most businesses are running on tools built for someone else. We design the web presence, custom software, and intelligent systems that fit the way you actually work — and grow as you do.',
     'label-build':      'Where do you want to start?',
@@ -42,7 +42,7 @@ const translations = {
   },
 
   es: {
-    'eyebrow':          'Tecnología que evoluciona contigo.',
+    'eyebrow':          'Tecnología que evoluciona <span class="eyebrow-break">contigo.</span>',
     'heading':          'Tú lideras la visión.<br><em>Nosotros construimos lo que la sostiene.</em>',
     'lead':             'La mayoría de los negocios operan con herramientas pensadas para otro. Diseñamos la presencia digital, el software personalizado y los sistemas inteligentes que se adaptan a cómo trabajas — y crecen contigo.',
     'label-build':      '¿Por dónde quieres empezar?',
@@ -84,7 +84,7 @@ const translations = {
   },
 
   it: {
-    'eyebrow':          'Tecnologia che cresce con te.',
+    'eyebrow':          'Tecnologia che cresce <span class="eyebrow-break">con te.</span>',
     'heading':          'Tu guidi la visione.<br><em>Noi costruiamo ciò che la porta avanti.</em>',
     'lead':             'La maggior parte delle aziende usa strumenti pensati per altri. Progettiamo la presenza digitale, software personalizzato e sistemi intelligenti che si adattano al tuo modo di lavorare — e crescono con te.',
     'label-build':      'Da dove vuoi iniziare?',
@@ -126,7 +126,7 @@ const translations = {
   },
 
   ca: {
-    'eyebrow':          'Tecnologia que creix amb tu.',
+    'eyebrow':          'Tecnologia que creix <span class="eyebrow-break">amb tu.</span>',
     'heading':          'Tu lidera la visió.<br><em>Nosaltres construïm el que la porta endavant.</em>',
     'lead':             'La majoria d\'empreses funcionen amb eines pensades per a uns altres. Dissenyem la presència digital, el programari personalitzat i els sistemes intel·ligents que s\'adapten a com treballes — i creixen amb tu.',
     'label-build':      'Per on vols començar?',
