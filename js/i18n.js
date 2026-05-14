@@ -193,10 +193,13 @@ function applyLang(lang) {
 
   document.documentElement.lang = lang;
 
+  const currentSpan = document.querySelector('.lang-current');
+  if (currentSpan) currentSpan.textContent = lang.toUpperCase();
+
   document.querySelectorAll('.lang-btn').forEach(btn => {
     const active = btn.dataset.lang === lang;
     btn.classList.toggle('is-active', active);
-    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    btn.setAttribute('aria-selected', active ? 'true' : 'false');
   });
 }
 
@@ -214,25 +217,68 @@ const LANG_NAMES = { en: 'English', es: 'Español', it: 'Italiano', ca: 'Català
 (function buildSwitcher() {
   const switcher = document.querySelector('.lang-switcher');
   if (!switcher) return;
-  switcher.setAttribute('role', 'group');
+
+  switcher.setAttribute('role', 'navigation');
   switcher.setAttribute('aria-label', 'Language selector');
-  SUPPORTED.forEach((lang, i) => {
-    if (i > 0) {
-      const dot = document.createElement('span');
-      dot.className = 'lang-dot';
-      dot.textContent = '·';
-      dot.setAttribute('aria-hidden', 'true');
-      switcher.appendChild(dot);
-    }
+
+  const activeLang = getLang();
+
+  const trigger = document.createElement('button');
+  trigger.className = 'lang-trigger';
+  trigger.setAttribute('aria-expanded', 'false');
+  trigger.setAttribute('aria-haspopup', 'listbox');
+
+  const currentSpan = document.createElement('span');
+  currentSpan.className = 'lang-current';
+  currentSpan.textContent = activeLang.toUpperCase();
+
+  const caret = document.createElement('span');
+  caret.className = 'lang-caret';
+  caret.setAttribute('aria-hidden', 'true');
+
+  trigger.appendChild(currentSpan);
+  trigger.appendChild(caret);
+
+  const options = document.createElement('div');
+  options.className = 'lang-options';
+  options.setAttribute('role', 'listbox');
+  options.setAttribute('aria-hidden', 'true');
+
+  SUPPORTED.forEach(lang => {
     const btn = document.createElement('button');
     btn.className = 'lang-btn';
     btn.dataset.lang = lang;
     btn.textContent = lang.toUpperCase();
     btn.setAttribute('aria-label', `Switch to ${LANG_NAMES[lang]}`);
-    btn.setAttribute('aria-pressed', 'false');
-    btn.addEventListener('click', () => setLang(lang));
-    switcher.appendChild(btn);
+    btn.setAttribute('role', 'option');
+    btn.setAttribute('aria-selected', lang === activeLang ? 'true' : 'false');
+    btn.addEventListener('click', () => { setLang(lang); closeMenu(); });
+    options.appendChild(btn);
   });
+
+  switcher.appendChild(trigger);
+  switcher.appendChild(options);
+
+  function openMenu() {
+    switcher.classList.add('is-open');
+    trigger.setAttribute('aria-expanded', 'true');
+    options.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeMenu() {
+    switcher.classList.remove('is-open');
+    trigger.setAttribute('aria-expanded', 'false');
+    options.setAttribute('aria-hidden', 'true');
+  }
+
+  trigger.addEventListener('click', e => {
+    e.stopPropagation();
+    switcher.classList.contains('is-open') ? closeMenu() : openMenu();
+  });
+
+  document.addEventListener('click', () => closeMenu());
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  document.addEventListener('scroll', () => closeMenu(), { passive: true });
 })();
 
 applyLang(getLang());

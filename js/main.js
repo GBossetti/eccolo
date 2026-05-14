@@ -12,6 +12,9 @@ function enterHome() {
   splash.classList.add('exiting');
   home.classList.add('entering');
 
+  const langFloat = document.querySelector('.lang-float');
+  if (langFloat) langFloat.classList.add('is-visible');
+
   splash.addEventListener('transitionend', function () {
     splash.style.display     = 'none';
     splash.style.willChange  = 'auto';
