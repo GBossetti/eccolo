@@ -182,18 +182,14 @@ html, body {
 
 /* ─── LANGUAGE FLOAT ─────────────────────────────────────────────── */
 .lang-float {
-  position: fixed;
-  top: 1.5rem;
-  right: clamp(1.4rem, 5vw, 3.5rem);
-  z-index: 500;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
   opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease 0.15s;
 }
 
-.lang-float.is-visible {
-  opacity: 1;
-  pointer-events: auto;
+#home.entering .lang-float {
+  animation: fadeIn 0.5s ease forwards 0.15s;
 }
 
 .lang-switcher {

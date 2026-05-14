@@ -12,16 +12,12 @@ function enterHome() {
   splash.classList.add('exiting');
   home.classList.add('entering');
 
-  const langFloat = document.querySelector('.lang-float');
-  if (langFloat) langFloat.classList.add('is-visible');
-
   splash.addEventListener('transitionend', function () {
     splash.style.display     = 'none';
     splash.style.willChange  = 'auto';
     home.style.position      = 'relative';
     home.style.transform     = 'none';
     home.style.willChange    = 'auto';
-    home.style.overflowY     = 'visible';
     home.style.height        = 'auto';
     home.style.inset         = 'auto';
     document.body.style.overflow            = 'auto';
