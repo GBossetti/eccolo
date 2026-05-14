@@ -21,6 +21,7 @@ function enterHome() {
     home.style.position      = 'relative';
     home.style.transform     = 'none';
     home.style.willChange    = 'auto';
+    home.style.overflowY     = 'visible';
     home.style.height        = 'auto';
     home.style.inset         = 'auto';
     document.body.style.overflow            = 'auto';
