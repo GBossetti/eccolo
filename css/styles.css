@@ -427,7 +427,7 @@ html, body {
 }
 
 @media (min-width: 900px) {
-  .svc-pillars { grid-template-columns: 1fr 1fr 1fr; align-items: start; }
+  .svc-pillars { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 .svc-pillar {
