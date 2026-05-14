@@ -371,7 +371,7 @@ html, body {
 }
 
 @media (min-width: 900px) {
-  .svc-pillars { grid-template-columns: 1fr 1fr 1fr; }
+  .svc-pillars { grid-template-columns: 1fr 1fr 1fr; align-items: start; }
 }
 
 .svc-pillar {
@@ -405,6 +405,7 @@ html, body {
   font-weight: 700;
   color: var(--home-text);
   line-height: 1.3;
+  transition: color 0.3s ease;
 }
 
 .svc-pillar-kicker {
@@ -477,8 +478,8 @@ html, body {
 
 /* ─── SVC-PILLAR — OPEN STATE ────────────────────────────────────── */
 .svc-pillar.is-open {
-  border-color: var(--green-dark);
-  background-color: rgba(2, 195, 154, 0.04);
+  border-color: var(--home-text);
+  background-color: var(--home-text);
 }
 
 .svc-pillar.is-open .svc-pillar-body {
@@ -487,8 +488,14 @@ html, body {
   opacity: 1;
 }
 
-.svc-pillar.is-open .svc-pillar-num    { color: var(--green); }
-.svc-pillar.is-open .svc-pillar-kicker { color: var(--home-text); }
+.svc-pillar.is-open .svc-pillar-num         { color: var(--green); }
+.svc-pillar.is-open .svc-pillar-title        { color: #ffffff; }
+.svc-pillar.is-open .svc-pillar-kicker       { color: var(--home-bg); }
+.svc-pillar.is-open .svc-pillar-body-inner   { color: rgba(240, 243, 189, 0.8); }
+.svc-pillar.is-open .svc-cap-line            { color: rgba(240, 243, 189, 0.55); }
+.svc-pillar.is-open .svc-cta                 { color: var(--green); }
+.svc-pillar.is-open .svc-cta:hover           { color: #ffffff; }
+.svc-pillar.is-open .svc-expand-btn          { color: var(--home-bg); opacity: 1; }
 
 /* ─── SVC-PILLAR — EXPAND INDICATOR ─────────────────────────────── */
 .svc-expand-btn {
