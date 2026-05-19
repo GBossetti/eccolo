@@ -18,7 +18,7 @@ const translations = {
     'p2-cta':           'Your routines, refined →',
 
     'p3-title':         'Specialized Intelligence',
-    'p3-kicker':        'Not built for everyone. Built for you.',
+    'p3-kicker':        'Learns your business. Assists your work.',
     'p3-body':          'Most AI tools are built for everyone, which means they\'re optimized for no one. We design custom AI agents trained on your specific business — so the automation thinks the way you do.',
     'p3-caps':          'Custom AI Agents / Business Logic Integration / Continuous Refinement',
     'p3-cta':           'Explore what\'s possible →',
@@ -60,7 +60,7 @@ const translations = {
     'p2-cta':           'Tus rutinas, refinadas →',
 
     'p3-title':         'Inteligencia Especializada',
-    'p3-kicker':        'No es para todos. Es para ti.',
+    'p3-kicker':        'Aprende tu negocio. Asiste tu trabajo.',
     'p3-body':          'La mayoría de las herramientas de IA están hechas para todos, lo que significa que no están optimizadas para nadie. Diseñamos agentes de IA entrenados en tu negocio específico — para que la automatización piense como tú.',
     'p3-caps':          'Agentes de IA Personalizados / Integración de Lógica de Negocio / Refinamiento Continuo',
     'p3-cta':           'Explora las posibilidades →',
@@ -84,8 +84,8 @@ const translations = {
   },
 
   it: {
-    'eyebrow':          'Tecnologia che cresce <span class="eyebrow-break">con te.</span>',
-    'heading':          'Tu guidi la visione.<br><em>Noi costruiamo ciò che la porta avanti.</em>',
+    'eyebrow':          'Tecnologia che si evolve <span class="eyebrow-break">con te.</span>',
+    'heading':          'Tu guidi la visione.<br><em>Noi costruiamo ciò che la sostiene.</em>',
     'lead':             'La maggior parte delle aziende usa strumenti pensati per altri. Progettiamo la presenza digitale, software personalizzato e sistemi intelligenti che si adattano al tuo modo di lavorare — e crescono con te.',
     'label-build':      'Da dove vuoi iniziare?',
 
@@ -102,18 +102,18 @@ const translations = {
     'p2-cta':           'Le tue routine, raffinate →',
 
     'p3-title':         'Intelligenza Specializzata',
-    'p3-kicker':        'Non per tutti. Per te.',
+    'p3-kicker':        'Impara il tuo business. Assiste il tuo lavoro.',
     'p3-body':          'La maggior parte degli strumenti AI è costruita per tutti, il che significa che non sono ottimizzati per nessuno. Progettiamo agenti AI addestrati sul tuo business specifico — così l\'automazione pensa come te.',
     'p3-caps':          'Agenti AI Personalizzati / Integrazione della Logica di Business / Raffinamento Continuo',
     'p3-cta':           'Esplora cosa è possibile →',
 
     'label-process':    'Come ci arriviamo',
     'proc-step1-title': 'Il Blueprint',
-    'proc-step1-desc':  'Iniziamo comprendendo la tua azienda — il ritmo, le frizioni, le opportunità. Insieme mappiamo esattamente dove la tecnologia può creare più spazio per te.',
+    'proc-step1-desc':  'Iniziamo comprendendo la tua azienda — il ritmo, le frizioni, le opportunità. Insieme mappiamo esattamente dove la tecnologia può creare più spazio perché tu possa guidare.',
     'proc-step2-title': 'Il Ritmo di Sviluppo',
     'proc-step2-desc':  'Il progresso non dovrebbe essere un mistero. Lavoriamo in cicli brevi e focalizzati dove vedi il lavoro prendere vita, lo testi in condizioni reali e lo plasmi mentre andiamo avanti.',
     'proc-step3-title': 'Lancio e Slancio',
-    'proc-step3-desc':  'Andare live è l\'inizio, non la fine. Usiamo dati reali e, soprattutto, i tuoi dati, per affinare i tuoi strumenti, migliorare la tua presenza e assicurarci che i tuoi sistemi siano sempre un passo avanti.',
+    'proc-step3-desc':  'Andare live è l\'inizio, non la fine. Usiamo dati reali e, soprattutto, i tuoi dati, per affinare i tuoi propri strumenti, raffinare la tua presenza e assicurarci che i tuoi sistemi siano sempre un passo avanti.',
 
     'label-contact':    'Contattaci',
     'contact-headline': 'Pronto a costruire<br>il tuo <span>vantaggio?</span>',
@@ -126,8 +126,8 @@ const translations = {
   },
 
   ca: {
-    'eyebrow':          'Tecnologia que creix <span class="eyebrow-break">amb tu.</span>',
-    'heading':          'Tu lidera la visió.<br><em>Nosaltres construïm el que la porta endavant.</em>',
+    'eyebrow':          'Tecnologia que evoluciona <span class="eyebrow-break">amb tu.</span>',
+    'heading':          'Tu lidera la visió.<br><em>Nosaltres construïm el que la sosté.</em>',
     'lead':             'La majoria d\'empreses funcionen amb eines pensades per a uns altres. Dissenyem la presència digital, el programari personalitzat i els sistemes intel·ligents que s\'adapten a com treballes — i creixen amb tu.',
     'label-build':      'Per on vols començar?',
 
@@ -144,7 +144,7 @@ const translations = {
     'p2-cta':           'Les teves rutines, refinades →',
 
     'p3-title':         'Intel·ligència Especialitzada',
-    'p3-kicker':        'No és per a tothom. És per a tu.',
+    'p3-kicker':        'Aprèn el teu negoci. Assisteix la teva feina.',
     'p3-body':          'La majoria d\'eines d\'IA estan construïdes per a tothom, la qual cosa significa que no estan optimitzades per a ningú. Dissenyem agents d\'IA entrenats en el teu negoci específic — perquè l\'automatització pensi com tu.',
     'p3-caps':          'Agents d\'IA Personalitzats / Integració de Lògica de Negoci / Refinament Continu',
     'p3-cta':           'Explora les possibilitats →',
@@ -155,7 +155,7 @@ const translations = {
     'proc-step2-title': 'El Ritme de Desenvolupament',
     'proc-step2-desc':  'El progrés no hauria de ser un misteri. Treballem en cicles curts i enfocats on veus el treball prendre vida, el proves en condicions reals i el modeles a mesura que avancem.',
     'proc-step3-title': 'Llançament i Impuls',
-    'proc-step3-desc':  'Sortir en viu és el principi, no el final. Usem dades del món real i, el més important, les teves dades, per afinar les teves pròpies eines, millorar la teva presència i assegurar-nos que els teus sistemes sempre estiguin un pas endavant.',
+    'proc-step3-desc':  'Sortir en viu és el principi, no el final. Usem dades del món real i, el més important, les teves dades, per afinar les teves pròpies eines, refinar la teva presència i assegurar-nos que els teus sistemes sempre estiguin un pas endavant.',
 
     'label-contact':    'Contacta\'ns',
     'contact-headline': 'Preparat per construir<br>el teu <span>avantatge?</span>',
