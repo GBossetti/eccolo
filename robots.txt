@@ -19,4 +19,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://eccolo.com/sitemap.xml
+Sitemap: https://eccolosolutions.com/sitemap.xml
