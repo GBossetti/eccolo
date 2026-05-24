@@ -447,11 +447,14 @@ html, body {
 }
 
 @media (min-width: 900px) {
-  .svc-pillars { grid-template-columns: 1fr 1fr 1fr; }
+  .svc-pillars {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+  }
 
   .svc-pillar.is-open,
   .svc-pillar {
-    border-color: var(--home-text);
+    border: none;
     background-color: var(--home-text);
   }
 
