@@ -448,6 +448,27 @@ html, body {
 
 @media (min-width: 900px) {
   .svc-pillars { grid-template-columns: 1fr 1fr 1fr; }
+
+  .svc-pillar.is-open,
+  .svc-pillar {
+    border-color: var(--home-text);
+    background-color: var(--home-text);
+  }
+
+  .svc-pillar .svc-pillar-body {
+    grid-template-rows: 1fr;
+    margin-bottom: 1.1rem;
+    opacity: 1;
+  }
+
+  .svc-pillar .svc-pillar-num         { color: var(--green); }
+  .svc-pillar .svc-pillar-title        { color: #ffffff; }
+  .svc-pillar .svc-pillar-kicker       { color: var(--home-bg); }
+  .svc-pillar .svc-pillar-body-inner   { color: rgba(240, 243, 189, 0.8); }
+  .svc-pillar .svc-cap-line            { color: rgba(240, 243, 189, 0.55); }
+  .svc-pillar .svc-cta                 { color: var(--green); }
+  .svc-pillar .svc-cta:hover           { color: #ffffff; }
+  .svc-pillar .svc-expand-btn          { display: none; }
 }
 
 .svc-pillar {

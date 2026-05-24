@@ -67,7 +67,8 @@ if (isMobile()) {
 
 // ─── SERVICE PILLAR ACCORDION ─────────────────────────────────────────────
 (function () {
-  const pillars = Array.from(document.querySelectorAll('.svc-pillar'));
+  const pillars   = Array.from(document.querySelectorAll('.svc-pillar'));
+  const isDesktop = () => window.matchMedia('(min-width: 900px)').matches;
 
   function setPillarState(pillar, open) {
     pillar.classList.toggle('is-open', open);
@@ -81,14 +82,19 @@ if (isMobile()) {
     if (body) body.setAttribute('aria-hidden', open ? 'false' : 'true');
   }
 
+  function initPillars() {
+    const open = isDesktop();
+    pillars.forEach(p => setPillarState(p, open));
+  }
+
   function togglePillar(target) {
+    if (isDesktop()) return;
     const willOpen = !target.classList.contains('is-open');
     pillars.forEach(p => setPillarState(p, false));
     if (willOpen) setPillarState(target, true);
   }
 
   pillars.forEach(pillar => {
-    pillar.setAttribute('tabindex', '0');
     pillar.addEventListener('click', e => {
       if (e.target.closest('.svc-cta')) return;
       togglePillar(pillar);
@@ -98,6 +104,9 @@ if (isMobile()) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); togglePillar(pillar); }
     });
   });
+
+  initPillars();
+  window.matchMedia('(min-width: 900px)').addEventListener('change', initPillars);
 })();
 
 btn.addEventListener('click', enterHome);
