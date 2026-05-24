@@ -11,6 +11,7 @@ function enterHome() {
   btn.style.pointerEvents = 'none';
   splash.classList.add('exiting');
   home.classList.add('entering');
+  home.removeAttribute('aria-hidden');
 
   splash.addEventListener('transitionend', function () {
     splash.style.display     = 'none';
@@ -70,10 +71,14 @@ if (isMobile()) {
 
   function setPillarState(pillar, open) {
     pillar.classList.toggle('is-open', open);
-    const btn  = pillar.querySelector('.svc-expand-btn');
-    const body = pillar.querySelector('.svc-pillar-body');
-    if (btn)  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (body) body.setAttribute('aria-hidden',  open ? 'false' : 'true');
+    const btn   = pillar.querySelector('.svc-expand-btn');
+    const body  = pillar.querySelector('.svc-pillar-body');
+    const title = pillar.querySelector('.svc-pillar-title');
+    if (btn) {
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (title) btn.setAttribute('aria-label', (open ? 'Collapse ' : 'Expand ') + title.textContent);
+    }
+    if (body) body.setAttribute('aria-hidden', open ? 'false' : 'true');
   }
 
   function togglePillar(target) {
