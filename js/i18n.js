@@ -252,6 +252,7 @@ const LANG_NAMES = { en: 'English', es: 'Español', it: 'Italiano', ca: 'Català
     btn.setAttribute('aria-label', `Switch to ${LANG_NAMES[lang]}`);
     btn.setAttribute('role', 'option');
     btn.setAttribute('aria-selected', lang === activeLang ? 'true' : 'false');
+    btn.setAttribute('tabindex', '-1');
     btn.addEventListener('click', () => { setLang(lang); closeMenu(); });
     options.appendChild(btn);
   });
@@ -263,12 +264,14 @@ const LANG_NAMES = { en: 'English', es: 'Español', it: 'Italiano', ca: 'Català
     switcher.classList.add('is-open');
     trigger.setAttribute('aria-expanded', 'true');
     options.setAttribute('aria-hidden', 'false');
+    options.querySelectorAll('.lang-btn').forEach(b => b.removeAttribute('tabindex'));
   }
 
   function closeMenu() {
     switcher.classList.remove('is-open');
     trigger.setAttribute('aria-expanded', 'false');
     options.setAttribute('aria-hidden', 'true');
+    options.querySelectorAll('.lang-btn').forEach(b => b.setAttribute('tabindex', '-1'));
   }
 
   trigger.addEventListener('click', e => {
