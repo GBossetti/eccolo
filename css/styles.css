@@ -132,7 +132,7 @@ html, body {
   white-space: nowrap;
   overflow: hidden;
   max-width: 0;
-  animation: growWidth 0.75s cubic-bezier(0.4, 0, 0.2, 1) forwards 1.2s;
+  animation: growWidth 1s cubic-bezier(0.4, 0, 0.2, 1) forwards 1.2s;
 }
 
 /* >> button */
