@@ -6,7 +6,7 @@ const translations = {
     'label-build':      'Where do you want to start?',
 
     'p1-title':         'Presence & Awareness',
-    'p1-kicker':        'Be found. Be understood.',
+    'p1-kicker':        'Be found. Be known.',
     'p1-body':          'A website isn\'t a brochure, it\'s your most consistent salesperson. We engineer web experiences where clean code, strategic SEO, and targeted advertising work together from the first line.',
     'p1-caps':          'High-Performance Web Design / Strategic SEO & GEO / Targeted Advertising',
     'p1-cta':           'Start with your presence →',
@@ -48,7 +48,7 @@ const translations = {
     'label-build':      '¿Por dónde quieres empezar?',
 
     'p1-title':         'Presencia y Visibilidad',
-    'p1-kicker':        'Que te encuentren. Que te entiendan.',
+    'p1-kicker':        'Que te encuentren. Que te conozcan.',
     'p1-body':          'Un sitio web no es un folleto, es tu vendedor más constante. Desarrollamos experiencias web donde el código limpio, el SEO estratégico y la publicidad dirigida trabajan juntos desde la primera línea.',
     'p1-caps':          'Diseño Web de Alto Rendimiento / SEO Estratégico y GEO / Publicidad Dirigida',
     'p1-cta':           'Empieza con tu presencia →',
@@ -90,7 +90,7 @@ const translations = {
     'label-build':      'Da dove vuoi iniziare?',
 
     'p1-title':         'Presenza e Visibilità',
-    'p1-kicker':        'Fatti trovare. Fatti capire.',
+    'p1-kicker':        'Fatti trovare. Fatti conoscere.',
     'p1-body':          'Un sito web non è una brochure, è il tuo venditore più costante. Progettiamo esperienze web dove codice pulito, SEO strategico e pubblicità mirata lavorano insieme dalla prima riga.',
     'p1-caps':          'Web Design ad Alte Prestazioni / SEO Strategico e GEO / Pubblicità Mirata',
     'p1-cta':           'Inizia con la tua presenza →',
@@ -132,7 +132,7 @@ const translations = {
     'label-build':      'Per on vols començar?',
 
     'p1-title':         'Presència i Visibilitat',
-    'p1-kicker':        'Que et trobin. Que t\'entenguin.',
+    'p1-kicker':        'Que et trobin. Que et coneguin.',
     'p1-body':          'Un lloc web no és un fullet, és el teu venedor més constant. Desenvolupem experiències web on el codi net, el SEO estratègic i la publicitat dirigida treballen junts des de la primera línia.',
     'p1-caps':          'Disseny Web d\'Alt Rendiment / SEO Estratègic i GEO / Publicitat Dirigida',
     'p1-cta':           'Comença amb la teva presència →',
