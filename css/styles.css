@@ -100,6 +100,8 @@ html, body {
   font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--splash-text);
+  position: relative;
+  z-index: 2;
 }
 
 .word-together span {
