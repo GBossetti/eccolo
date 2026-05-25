@@ -35,7 +35,7 @@ const translations = {
     'contact-headline': 'Ready to build<br>your <span>advantage?</span>',
     'contact-sub':      'It starts with one conversation.',
     'cta-btn':          'Book a Discovery Session',
-    'contact-email':    'solutions@eccolo.com',
+    'contact-email':    'start@eccolosolutions.com',
     'footer-copy':      '© 2026 ECCOLO — All rights reserved',
   },
 
@@ -75,7 +75,7 @@ const translations = {
     'contact-headline': '¿Listo para construir<br>tu <span>ventaja?</span>',
     'contact-sub':      'Todo empieza con una conversación.',
     'cta-btn':          'Reservar una Sesión de Descubrimiento',
-    'contact-email':    'solutions@eccolo.com',
+    'contact-email':    'start@eccolosolutions.com',
     'footer-copy':      '© 2026 ECCOLO — Todos los derechos reservados',
   },
 
@@ -115,7 +115,7 @@ const translations = {
     'contact-headline': 'Pronto a costruire<br>il tuo <span>vantaggio?</span>',
     'contact-sub':      'Tutto inizia con una conversazione.',
     'cta-btn':          'Prenota una Sessione Esplorativa',
-    'contact-email':    'solutions@eccolo.com',
+    'contact-email':    'start@eccolosolutions.com',
     'footer-copy':      '© 2026 ECCOLO — Tutti i diritti riservati',
   },
 
@@ -155,7 +155,7 @@ const translations = {
     'contact-headline': 'Preparat per construir<br>el teu <span>avantatge?</span>',
     'contact-sub':      'Tot comença amb una conversa.',
     'cta-btn':          'Reserva una Sessió de Descoberta',
-    'contact-email':    'solutions@eccolo.com',
+    'contact-email':    'start@eccolosolutions.com',
     'footer-copy':      '© 2026 ECCOLO — Tots els drets reservats',
   }
 };
