@@ -126,6 +126,7 @@ html, body {
 /* "software design" inline subtitle */
 .splash-sub {
   font-family: 'Playwrite IS', cursive;
+  font-weight: 200;
   font-size: 1.1em;
   color: var(--splash-text);
   display: inline-block;
